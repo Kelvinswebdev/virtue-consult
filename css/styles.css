@@ -848,6 +848,7 @@ li {
 .projects-showcase {
   display: grid;
   gap: 18px;
+  margin-top: -80px;
 }
 
 .projects-row {
@@ -863,12 +864,12 @@ li {
   display: flex;
   gap: 14px;
   min-width: max-content;
-  animation: projectsMarquee 36s linear infinite;
+  animation: projectsMarquee 50s linear infinite;
 }
 
 .projects-row.reverse .projects-track {
   animation-name: projectsMarqueeReverse;
-  animation-duration: 40s;
+  animation-duration: 55s;
 }
 
 .projects-row:hover .projects-track {
