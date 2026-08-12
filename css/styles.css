@@ -14,9 +14,6 @@ body {
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 
 
@@ -81,17 +78,8 @@ html {
     z-index: 1;
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,0.78) 0%,
-            rgba(0,0,0,0.45) 45%,
-            rgba(0,0,0,0.15) 100%
-        ),
-        linear-gradient(
-            0deg,
-            rgba(0,0,0,0.55),
-            transparent 40%
-        );
+        
+  linear-gradient(to bottom,rgba(0,0,0,0),rgb(0, 0, 0));
 }
 
 
@@ -389,25 +377,27 @@ html {
     position: relative;
     z-index: 5;
 
-    max-width: 850px;
+    max-width: 1100px;
 
     margin-left: 8vw;
+    text-align: center;
 
     padding-top: 10vh;
 }
 
-
+#hero-description{
+  text-align: center;
+}
 .hero-label {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-
+    text-align: center;
     margin-bottom: 25px;
-
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
-
     color: rgba(255,255,255,0.7);
 }
 
@@ -415,32 +405,26 @@ html {
 .hero-label span {
     width: 30px;
     height: 1px;
-
     background: #fff;
 }
 
 
 .hero-content h1 {
-    font-size: clamp(50px, 6.5vw, 100px);
-
+    font-size: clamp(60px, 8.5vw, 100px);
     line-height: 0.95;
-
+    color: #fff;
+    text-align: center;
     letter-spacing: -5px;
-
     font-weight: 600;
-
-    max-width: 850px;
+    max-width: 1100px;
 }
 
 
 .hero-content p {
-    max-width: 560px;
-
+    max-width: 1100px;
     margin-top: 30px;
-
     font-size: 16px;
     line-height: 1.7;
-
     color: rgba(255,255,255,0.72);
 }
 
@@ -452,7 +436,7 @@ html {
 .hero-buttons {
     display: flex;
     align-items: center;
-
+    justify-content: center;
     gap: 15px;
 
     margin-top: 35px;
@@ -476,7 +460,7 @@ html {
 
 
 .primary-btn {
-    background: #fff;
+    background: #ecb500;
     color: #111;
 }
 
