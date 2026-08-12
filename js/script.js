@@ -236,3 +236,109 @@ mobileLinks.forEach(link => {
     );
 
 });
+
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const revealElements = document.querySelectorAll(
+    ".reveal-up, .reveal-left"
+);
+
+const revealObserver = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("active");
+
+                revealObserver.unobserve(entry.target);
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+
+revealElements.forEach(element => {
+    revealObserver.observe(element);
+});
+
+
+/* =========================
+   NUMBER COUNTERS
+========================= */
+
+const counters = document.querySelectorAll("[data-count]");
+
+const counterObserver = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            const counter = entry.target;
+
+            const target = Number(
+                counter.getAttribute("data-count")
+            );
+
+            let current = 0;
+
+            const duration = 1800;
+
+            const startTime = performance.now();
+
+
+            function updateCounter(currentTime) {
+
+                const progress =
+                    Math.min(
+                        (currentTime - startTime) / duration,
+                        1
+                    );
+
+                const ease =
+                    1 - Math.pow(1 - progress, 3);
+
+                current = Math.floor(target * ease);
+
+                counter.textContent = current;
+
+                if (progress < 1) {
+
+                    requestAnimationFrame(updateCounter);
+
+                } else {
+
+                    counter.textContent = target;
+
+                }
+
+            }
+
+            requestAnimationFrame(updateCounter);
+
+            counterObserver.unobserve(counter);
+
+        });
+
+    },
+    {
+        threshold: 0.5
+    }
+);
+
+
+counters.forEach(counter => {
+    counterObserver.observe(counter);
+});
