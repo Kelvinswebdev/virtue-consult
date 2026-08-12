@@ -775,7 +775,7 @@ body {
     height: 100%;
     width: 55px;
 
-    background: #ff5b18;
+    background: #ffae00;
 
     display: flex;
     justify-content: center;
@@ -827,7 +827,7 @@ body {
 
     border-radius: 50%;
 
-    background: #ff5b18;
+    background: #ffae00;
 
     display: grid;
     place-items: center;
@@ -914,7 +914,7 @@ body {
 ========================= */
 
 .section-label {
-    color: #ff5b18;
+    color: #ffae00;
 
     font-size: 14px;
 
@@ -936,7 +936,7 @@ body {
     width: 35px;
     height: 2px;
 
-    background: #ff5b18;
+    background: #ffae00;
 }
 
 .about-content h2 {
@@ -1000,12 +1000,12 @@ body {
 
     border-radius: 50%;
 
-    border: 1px solid #ff5b18;
+    border: 1px solid #ffae00;
 
     display: grid;
     place-items: center;
 
-    color: #ff5b18;
+    color: #ffae00;
 
     font-weight: 800;
 }
@@ -1046,7 +1046,7 @@ body {
 
     gap: 18px;
 
-    border-left: 3px solid #ff5b18;
+    border-left: 3px solid #ffae00;
 }
 
 .phone-icon {
@@ -1060,7 +1060,7 @@ body {
     display: grid;
     place-items: center;
 
-    color: #ff5b18;
+    color: #ffae00;
 
     font-size: 22px;
 }
@@ -1135,7 +1135,7 @@ body {
 .stat span {
     font-size: 25px;
 
-    color: #ff5b18;
+    color: #ffae00;
 
     font-weight: 800;
 }
