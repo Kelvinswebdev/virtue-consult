@@ -183,3 +183,56 @@ videos.forEach(video => {
 ========================= */
 
 showSlide(0);
+
+
+
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuToggle = document.querySelector(".menu-toggle");
+const menuClose = document.querySelector(".menu-close");
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileLinks = document.querySelectorAll(".mobile-links a");
+
+
+function openMenu() {
+
+    mobileMenu.classList.add("open");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeMenu() {
+
+    mobileMenu.classList.remove("open");
+
+    document.body.style.overflow = "";
+
+}
+
+
+menuToggle.addEventListener(
+    "click",
+    openMenu
+);
+
+
+menuClose.addEventListener(
+    "click",
+    closeMenu
+);
+
+
+mobileLinks.forEach(link => {
+
+    link.addEventListener(
+        "click",
+        closeMenu
+    );
+
+});
