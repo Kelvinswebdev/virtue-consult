@@ -342,3 +342,81 @@ const counterObserver = new IntersectionObserver(
 counters.forEach(counter => {
     counterObserver.observe(counter);
 });
+
+
+
+
+
+
+
+
+
+/* =========================
+   PERSPECTIVE REVEAL
+========================= */
+
+const perspectiveSection =
+    document.querySelector(".perspective-section");
+
+
+const perspectiveElements = [
+    perspectiveSection.querySelector(".perspective-mark"),
+    perspectiveSection.querySelector("h2"),
+    perspectiveSection.querySelector(".perspective-right")
+];
+
+
+perspectiveElements.forEach(element => {
+
+    element.style.opacity = "0";
+
+    element.style.transform =
+        "translateY(35px)";
+
+    element.style.transition =
+        "opacity 0.9s ease, transform 0.9s ease";
+
+});
+
+
+const perspectiveObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (!entry.isIntersecting) return;
+
+
+                perspectiveElements.forEach(
+                    (element, index) => {
+
+                        setTimeout(() => {
+
+                            element.style.opacity = "1";
+
+                            element.style.transform =
+                                "translateY(0)";
+
+                        }, index * 180);
+
+                    }
+                );
+
+
+                perspectiveObserver.unobserve(
+                    entry.target
+                );
+
+            });
+
+        },
+        {
+            threshold: 0.25
+        }
+    );
+
+
+perspectiveObserver.observe(
+    perspectiveSection
+);

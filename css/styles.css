@@ -1553,7 +1553,7 @@ body {
     position: absolute;
     inset: 0;
 
-    background-image: url("images/consultancy-team.jpg");
+    background-image:url(assets/images/consultant1.jpg);
     background-size: cover;
     background-position: center;
 
@@ -1576,13 +1576,13 @@ body {
        large heading remains readable.
     */
 
-    background:
+    /* background:
         linear-gradient(
             90deg,
             rgba(10, 10, 10, 0.94) 0%,
             rgba(10, 10, 10, 0.84) 42%,
             rgba(10, 10, 10, 0.68) 100%
-        );
+        ); */
 
     z-index: 1;
 }
@@ -1660,7 +1660,7 @@ body {
 
 
 .dot.orange {
-    background: #ff6b00;
+    background: #ffae00;
 }
 
 
@@ -1902,9 +1902,357 @@ body {
 
  /* the perspective section ends here   */
 
+/* the next section begins here our expertise section  */
+
+/* =========================
+   EXPERTISE
+========================= */
+
+/* =========================================
+   EXPERTISE SECTION
+========================================= */
+
+.expertise-section {
+    width: 100%;
+    padding: 110px 0;
+    background: #ffffff;
+}
+
+.expertise-container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
 
 
+/* =========================================
+   HEADER
+========================================= */
 
+.expertise-header {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+
+    align-items: center;
+
+    margin-bottom: 70px;
+}
+
+.expertise-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.heading-mark {
+    width: 4px;
+    min-width: 4px;
+    height: 70px;
+
+    margin-top: 8px;
+
+    background: #d8a928;
+}
+
+.expertise-heading h2 {
+    margin: 0;
+
+    color: #09285d;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(40px, 4vw, 56px);
+    line-height: 1.15;
+
+    font-weight: 500;
+
+    letter-spacing: -1.5px;
+}
+
+.expertise-heading h2 span {
+    display: block;
+}
+
+.expertise-header > p {
+    margin: 0;
+
+    color: #606060;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CARDS GRID
+========================================= */
+
+.expertise-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.expertise-card {
+    position: relative;
+
+    min-height: 470px;
+
+    padding: 45px 38px 38px;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeeeb;
+
+    box-shadow:
+        0 20px 50px rgba(8, 38, 93, 0.06);
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        border-color 0.45s ease;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.expertise-card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(8, 38, 93, 0.12);
+
+    box-shadow:
+        0 30px 70px rgba(8, 38, 93, 0.11);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.service-icon {
+    width: 76px;
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 34px;
+
+    border-radius: 50%;
+
+    background: #f3f6fa;
+
+    color: #09285d;
+
+    font-size: 27px;
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+.expertise-card:hover .service-icon {
+    background: #09285d;
+    color: #ffffff;
+
+    transform: rotate(-5deg) scale(1.05);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.service-content h3 {
+    margin: 0 0 20px;
+
+    color: #172f58;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    letter-spacing: -0.5px;
+}
+
+.service-content p {
+    margin: 0;
+
+    color: #69758a;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.service-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    width: fit-content;
+
+    margin-top: auto;
+    padding-top: 30px;
+
+    color: #09285d;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: color 0.3s ease;
+}
+
+.service-btn span {
+    font-size: 19px;
+
+    transition: transform 0.3s ease;
+}
+
+.service-btn:hover {
+    color: #c3941c;
+}
+
+.service-btn:hover span {
+    transform: translate(5px, -5px);
+}
+
+
+/* =========================================
+   TOP ACCENT
+========================================= */
+
+.expertise-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #d8a928;
+
+    transition: width 0.45s ease;
+}
+
+.expertise-card:hover::before {
+    width: 100%;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .expertise-header {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .expertise-card:last-child {
+        grid-column: span 2;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .expertise-section {
+        padding: 75px 0;
+    }
+
+    .expertise-container {
+        width: 90%;
+    }
+
+    .expertise-header {
+        margin-bottom: 45px;
+    }
+
+    .expertise-heading {
+        gap: 16px;
+    }
+
+    .heading-mark {
+        height: 55px;
+    }
+
+    .expertise-heading h2 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    .expertise-header > p {
+        font-size: 16px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .expertise-card:last-child {
+        grid-column: auto;
+    }
+
+    .expertise-card {
+        min-height: 400px;
+        padding: 35px 30px 30px;
+    }
+
+}
+
+
+/* the expertise section ends here */
 
 
 
