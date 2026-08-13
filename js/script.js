@@ -420,3 +420,51 @@ const perspectiveObserver =
 perspectiveObserver.observe(
     perspectiveSection
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const vmElements = document.querySelectorAll(
+    ".vm-heading, .vm-header > p, .vm-card, .vm-image"
+);
+
+const vmObserver = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+                vmObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+
+vmElements.forEach((element, index) => {
+
+    element.style.transitionDelay = `${index * 0.08}s`;
+
+    vmObserver.observe(element);
+
+});
