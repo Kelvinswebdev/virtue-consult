@@ -1293,7 +1293,614 @@ body {
 
 
 
+/* the next section begins here intro section */
+/* =========================
+   INTRO SECTION
+========================= */
 
+.intro-section {
+    position: relative;
+
+    background: #f4f4f0;
+
+    color: #111;
+
+    padding: 120px 8vw 100px;
+}
+
+
+/* TOP */
+
+.intro-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 80px;
+}
+
+
+.section-number {
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+.section-label {
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #555;
+}
+
+
+/* MAIN */
+
+.intro-main {
+    display: grid;
+
+    grid-template-columns: auto auto;
+
+    gap: 10px;
+
+    align-items: start;
+}
+
+.intro-heading  {
+  /* width: 50%; */
+}
+
+
+.intro-heading h2 {
+    margin: 0;
+
+
+    font-size: clamp(28px, 6vw, 90px);
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+
+    font-weight: 500;
+}
+
+
+.intro-heading h2 span {
+    color: #777;
+}
+
+
+/* CONTENT */
+
+.intro-content {
+    padding-top: 10px;
+    /* width: 50%; */
+}
+
+
+.intro-lead {
+    font-size: 21px;
+
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+
+    color: #222;
+}
+
+
+.intro-content p:not(.intro-lead) {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #666;
+
+    max-width: 430px;
+}
+
+
+/* LINK */
+
+.intro-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 40px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #111;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    transition: gap 0.3s ease;
+}
+
+
+.intro-link:hover {
+    gap: 25px;
+}
+
+
+/* BOTTOM */
+
+.intro-bottom {
+    margin-top: 120px;
+}
+
+
+.intro-line {
+    width: 100%;
+
+    height: 1px;
+
+    background: #d2d2ce;
+}
+
+
+.intro-tags {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 20px;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    color: #777;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .intro-section {
+        padding: 80px 6vw;
+    }
+
+
+    .intro-top {
+        margin-bottom: 50px;
+    }
+
+
+    .intro-main {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .intro-heading h2 {
+        font-size: clamp(45px, 12vw, 70px);
+
+        letter-spacing: -3px;
+    }
+
+
+    .intro-lead {
+        font-size: 18px;
+    }
+
+
+    .intro-bottom {
+        margin-top: 70px;
+    }
+
+
+    .intro-tags {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+}
+/* the intro section ends here */
+
+/* the perspective sectio n begins here */
+
+
+
+
+/* =========================
+   PERSPECTIVE SECTION
+========================= */
+
+.perspective-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 480px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background: #111;
+    color: #fff;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.perspective-bg {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/consultancy-team.jpg");
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.02);
+
+    transition: transform 1.2s ease;
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.perspective-overlay {
+    position: absolute;
+    inset: 0;
+
+    /*
+       Left side is darker so the
+       large heading remains readable.
+    */
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 10, 10, 0.94) 0%,
+            rgba(10, 10, 10, 0.84) 42%,
+            rgba(10, 10, 10, 0.68) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.perspective-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1700px;
+
+    margin: 0 auto;
+
+    padding: 85px 6vw;
+
+    display: grid;
+
+    grid-template-columns: 1.25fr 0.75fr;
+
+    gap: 8vw;
+
+    align-items: center;
+}
+
+
+/* =========================
+   LEFT
+========================= */
+
+.perspective-left {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 25px;
+}
+
+
+/* =========================
+   DOT MARK
+========================= */
+
+.perspective-mark {
+    width: 65px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 16px);
+
+    grid-auto-rows: 16px;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+
+.dot {
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+
+.dot.orange {
+    background: #ff6b00;
+}
+
+
+.dot.blue {
+    background: #2879e8;
+}
+
+
+/* create the staggered arrangement */
+
+.perspective-mark .dot:nth-child(1) {
+    grid-column: 1;
+}
+
+.perspective-mark .dot:nth-child(2) {
+    grid-column: 2;
+}
+
+.perspective-mark .dot:nth-child(3) {
+    grid-column: 3;
+}
+
+.perspective-mark .dot:nth-child(4) {
+    grid-column: 2;
+}
+
+.perspective-mark .dot:nth-child(5) {
+    grid-column: 3;
+}
+
+.perspective-mark .dot:nth-child(6) {
+    grid-column: 3;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.perspective-left h2 {
+    max-width: 760px;
+
+    margin: 0;
+
+    font-size: clamp(
+        42px,
+        3.35vw,
+        68px
+    );
+
+    line-height: 1.28;
+
+    letter-spacing: -2px;
+
+    font-weight: 400;
+}
+
+
+.perspective-left h2 span {
+    color: rgba(255,255,255,0.72);
+}
+
+
+/* =========================
+   RIGHT
+========================= */
+
+.perspective-right {
+    max-width: 520px;
+
+    justify-self: end;
+}
+
+
+.perspective-right p {
+    margin: 0;
+
+    font-size: clamp(
+        17px,
+        1.2vw,
+        22px
+    );
+
+    line-height: 1.65;
+
+    color: rgba(255,255,255,0.88);
+}
+
+
+/* =========================
+   LINK
+========================= */
+
+.perspective-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid
+        rgba(255,255,255,0.5);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        gap 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.perspective-link span {
+    font-size: 17px;
+}
+
+
+.perspective-link:hover {
+    gap: 20px;
+
+    border-color: #fff;
+}
+
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.perspective-section:hover
+.perspective-bg {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .perspective-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 80px 6vw;
+    }
+
+
+    .perspective-right {
+        justify-self: start;
+
+        margin-left: 90px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .perspective-section {
+        min-height: auto;
+    }
+
+
+    .perspective-container {
+        padding: 75px 6vw;
+    }
+
+
+    .perspective-left {
+        gap: 15px;
+    }
+
+
+    .perspective-mark {
+        width: 38px;
+
+        grid-template-columns:
+            repeat(3, 9px);
+
+        grid-auto-rows: 9px;
+
+        gap: 5px;
+
+        margin-top: 7px;
+    }
+
+
+    .dot {
+        width: 9px;
+        height: 9px;
+    }
+
+
+    .perspective-left h2 {
+        font-size: clamp(
+            32px,
+            9vw,
+            48px
+        );
+
+        line-height: 1.18;
+
+        letter-spacing: -1.2px;
+    }
+
+
+    .perspective-right {
+        margin-left: 53px;
+
+        max-width: calc(100% - 53px);
+    }
+
+
+    .perspective-right p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .perspective-link {
+        margin-top: 25px;
+    }
+
+}
+
+ /* the perspective section ends here   */
 
 
 
