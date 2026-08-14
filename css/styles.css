@@ -375,7 +375,7 @@ body {
 .hero-content {
     position: relative;
     z-index: 5;
-
+  top: 100px;
     max-width: 1100px;
 
     margin-left: 8vw;
@@ -414,7 +414,7 @@ body {
     color: #fff;
     text-align: center;
     letter-spacing: -5px;
-    font-weight: 600;
+    font-weight: lighter;
     max-width: 1100px;
 }
 
@@ -1365,7 +1365,7 @@ body {
     font-size: clamp(40px, 4vw, 56px);
     line-height: 1.15;
 
-    font-weight: 500;
+    font-weight: lighter;
 
     letter-spacing: -1.5px;
 }
@@ -1594,7 +1594,7 @@ body {
     font-size: clamp(40px, 4vw, 56px);
     line-height: 1.15;
 
-    font-weight: 500;
+    font-weight: lighter;
 
     letter-spacing: -1.5px;
 }
@@ -3373,7 +3373,7 @@ body {
 ========================================= */
 
 .partner-logo {
-    width: 190px;
+    width: 250px;
     height: 100px;
 
     flex-shrink: 0;
@@ -3386,10 +3386,9 @@ body {
 
 
 .partner-logo img {
-    max-width: 100%;
-    max-height: 75px;
 
-    width: auto;
+
+    width: 200px;
     height: auto;
 
     object-fit: contain;
@@ -3399,7 +3398,7 @@ body {
        Remove these two lines if your logos are already
        prepared exactly as you want them.
     */
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     opacity: .72;
 
     transition:
@@ -3537,6 +3536,539 @@ body {
 
     .partner-logo img {
         max-height: 60px;
+    }
+
+}
+
+
+/* the footer starts here */
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    position: relative;
+
+    width: 100%;
+
+    background: #061b3b;
+
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND IMAGE
+========================================= */
+
+.footer-bg {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("images/footer-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: .18;
+
+    transform: scale(1.02);
+}
+
+
+.footer-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 20, 43, .97),
+            rgba(6, 27, 59, .94)
+        );
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.footer-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
+    padding: 95px 0 75px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.35fr
+        .75fr
+        1fr
+        1fr;
+
+    gap: 55px;
+}
+
+
+/* =========================================
+   COMPANY
+========================================= */
+
+.footer-company {
+    max-width: 290px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.footer-logo {
+    display: inline-flex;
+
+    flex-direction: column;
+
+    text-decoration: none;
+
+    margin-bottom: 25px;
+}
+
+
+.logo-main {
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    line-height: 1;
+}
+
+
+.logo-sub {
+    margin-top: 7px;
+
+    color: #d8a928;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.footer-description {
+    margin: 0;
+
+    color: #c8d0dc;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   OFFICE HOURS
+========================================= */
+
+.footer-hours {
+    margin-top: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.footer-hours span {
+    color: #d8a928;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.footer-hours strong {
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   COLUMN HEADINGS
+========================================= */
+
+.footer-column h3 {
+    position: relative;
+
+    margin: 0 0 25px;
+
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+
+    font-weight: 500;
+}
+
+
+.footer-column h3::after {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+
+    height: 2px;
+
+    margin-top: 12px;
+
+    background: #d8a928;
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+.footer-links {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+.footer-links li {
+    margin: 0;
+}
+
+
+.footer-links a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #c8d0dc;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.footer-links a i {
+    color: #d8a928;
+
+    font-size: 8px;
+
+    transition:
+        transform .3s ease;
+}
+
+
+.footer-links a:hover {
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+
+
+.footer-links a:hover i {
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-list {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.contact-list li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    color: #c8d0dc;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.contact-list li > i {
+    width: 18px;
+
+    margin-top: 3px;
+
+    color: #d8a928;
+
+    font-size: 13px;
+}
+
+
+.contact-list a {
+    display: block;
+
+    color: #c8d0dc;
+
+    text-decoration: none;
+
+    transition: color .3s ease;
+}
+
+
+.contact-list a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   SOCIALS
+========================================= */
+
+.footer-socials {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+
+.footer-socials a {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(216, 169, 40, .45);
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+
+.footer-socials a:hover {
+    background: #d8a928;
+
+    border-color: #d8a928;
+
+    color: #061b3b;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+    position: relative;
+
+    z-index: 2;
+
+    border-top:
+        1px solid rgba(255,255,255,.1);
+}
+
+
+.footer-bottom-container {
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #8f9aaa;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+}
+
+
+.footer-legal {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.footer-legal a {
+    color: #8f9aaa;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    transition: color .3s ease;
+}
+
+
+.footer-legal a:hover {
+    color: #d8a928;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 55px 45px;
+    }
+
+    .footer-company {
+        max-width: 360px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        width: 90%;
+
+        padding: 70px 0 55px;
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .footer-company {
+        max-width: 100%;
+    }
+
+    .footer-bottom-container {
+        width: 90%;
+
+        padding: 20px 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .footer-legal {
+        flex-wrap: wrap;
+
+        gap: 15px;
     }
 
 }
