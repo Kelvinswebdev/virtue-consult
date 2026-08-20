@@ -46,10 +46,10 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="construction-engineering.html">Construction & Engineering</a>
-        <a href="consulting-professional.html">Consulting</a>
+        <a href="services.html">Services</a>
+        <a href="services.html">Consulting</a>
         <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header> -->
@@ -59,25 +59,26 @@
 
 <nav class="navbar">
 
-    <a href="#" class="logo">
+    <a href="index.html" class="logo" aria-label="Virtue Konsult home">
         <!-- YOUR<span>CONSULT</span> -->
          <img src="assets/images/virtue-logo.png" alt="Virtue Konsult logo" width="150" class="logo-img">  
     </a>
 
     <!-- Desktop Navigation -->
     <div class="nav-links">
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="construction-engineering.html">Construction & Engineering</a>
-        <a href="consulting-professional.html">Consulting</a>
-        <a href="contact.html">Contact</a>
+        <a href="services.html">Services</a>
+        <a href="insights.html">Insights</a>
+        <a href="#contact">Contact</a>
     </div>
 
-    <a href="#" class="nav-button">
+    <a href="#contact" class="nav-button">
         Let's Talk
     </a>
 
     <!-- Mobile Menu Button -->
-    <button class="menu-toggle" aria-label="Open menu">
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span>
         <span></span>
     </button>
@@ -87,7 +88,7 @@
 
 <!-- MOBILE MENU -->
 
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobile-menu">
 
         <div class="mobile-menu-header">
 
@@ -100,26 +101,37 @@
         </div>
 
         <div class="mobile-links">
+             <a href="index.html">
+                <span>00</span>
+                Home
+            </a>
+            
 
-            <a href="#">
+            <a href="about.html">
                 <span>01</span>
                 About
             </a>
 
-            <a href="#">
+            <a href="services.html">
                 <span>02</span>
                 Services
             </a>
 
-            <a href="#">
+            <a href="insights.html">
                 <span>03</span>
                 Insights
             </a>
 
-            <a href="#">
+            <a href="#contact">
                 <span>04</span>
                 Contact
+                
             </a>
+
+            <!-- <a href="contact.html">
+                <span>04</span>
+                Contact
+            </a> -->
 
         </div>
 
@@ -130,7 +142,7 @@
 
     </div>
 
-    <header class="hero">
+    <header class="hero" id="home">
 
 
 
@@ -190,12 +202,12 @@
 
             <div class="hero-buttons">
 
-                <a href="#" class="primary-btn">
+                <a href="services.html" class="primary-btn">
                     Explore Our Services
                     <span>↗</span>
                 </a>
 
-                <a href="#" class="secondary-btn">
+                <a href="#about" class="secondary-btn">
                     Discover More
                 </a>
 
@@ -278,7 +290,7 @@
                               
                 </div>
 
-                <a href="tel:+233201234567" class="contact-arrow">
+                <a href="tel:+233241417656" class="contact-arrow">
                     →
                 </a>
             </div>
@@ -384,7 +396,7 @@
                 <div>
                     <!-- <small>CALL US ON</small> -->
 
-                    <a href="tel:+233201234567">
+                    <a href="tel:+233241417656">
                         <!-- +233 20 123 4567 -->
                     </a>
                 </div>
@@ -466,7 +478,7 @@
                 to solve meaningful business challenges.
             </p>
 
-            <a href="#" class="intro-link">
+            <a href="about.html" class="intro-link">
                 Discover who we are
                 <span>↗</span>
             </a>
@@ -505,7 +517,7 @@
 <!-- the perspective section ends here -->
 
 <!-- the next section begins here  -->
-<section class="expertise-section">
+<section class="expertise-section" id="expertise">
 
     <div class="expertise-container">
 
@@ -538,7 +550,7 @@
             <article class="expertise-card">
 
                 <!-- Construction -->
-                <div id="service-icon">
+                <div class="service-icon">
                     <i class="fa-solid fa-building"></i>
                 </div>
 
@@ -555,7 +567,7 @@
                         expertise and disciplined execution.
                     </p>
 
-                    <a href="#" class="service-btn">
+                    <a href="services.html" class="service-btn">
                         Explore Service
                         <span>↗</span>
                     </a>
@@ -568,7 +580,7 @@
             <!-- CARD 2 -->
             <article class="expertise-card">
 
-                <div id="service-icon">
+                <div class="service-icon">
                     <i class="fa-solid fa-compass-drafting"></i>
                 </div>
 
@@ -585,7 +597,7 @@
                         for sustainable growth.
                     </p>
 
-                    <a href="#" class="service-btn">
+                    <a href="services.html" class="service-btn">
                         Explore Service
                         <span>↗</span>
                     </a>
@@ -598,7 +610,7 @@
             <!-- CARD 3 -->
             <article class="expertise-card">
 
-                <div id="service-icon">
+                <div class="service-icon">
                     <i class="fa-solid fa-hotel"></i>
                 </div>
 
@@ -615,7 +627,7 @@
                         and lasting value.
                     </p>
 
-                    <a href="#" class="service-btn">
+                    <a href="services.html" class="service-btn">
                         Explore Service
                         <span>↗</span>
                     </a>
@@ -960,7 +972,7 @@
             </div>
 
 
-            <form class="inquiry-form">
+            <form class="inquiry-form" method="post">
 
                 <!-- Name -->
                 <div class="form-group">
@@ -1118,12 +1130,12 @@
 
             <p>
                 We share practical insights, industry perspectives and
-                meaningful conversations  designed to help organisations
+                meaningful conversations designed to help organisations
                 stay informed, make better decisions and navigate a
                 changing business environment.
             </p>
 
-            <a href="#" class="insights-button">
+            <a href="insights.html" class="insights-button">
                 Explore Our Insights
                 <span>↗</span>
             </a>
@@ -1263,7 +1275,7 @@
 
         <div class="footer-column footer-company">
 
-            <a href="#" class="footer-logo">
+            <a href="index.html" class="footer-logo" aria-label="Virtue Konsult home">
                 <span class="logo-main">VIRTUE</span>
                 <span class="logo-sub">KONSULT LIMITED</span>
             </a>
@@ -1319,9 +1331,9 @@
                 </li>
 
                 <li>
-                    <a href="#projects">
+                    <a href="services.html">
                         <i class="fa-solid fa-chevron-right"></i>
-                        Projects
+                        Services
                     </a>
                 </li>
 
@@ -1355,35 +1367,35 @@
             <ul class="footer-links">
 
                 <li>
-                    <a href="#">
+                    <a href="services.html">
                         <i class="fa-solid fa-chevron-right"></i>
                         Construction & Infrastructure
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="services.html">
                         <i class="fa-solid fa-chevron-right"></i>
                         Strategic Consulting
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="services.html">
                         <i class="fa-solid fa-chevron-right"></i>
                         Hospitality & Experiences
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="services.html">
                         <i class="fa-solid fa-chevron-right"></i>
                         Projects
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="insights.html">
                         <i class="fa-solid fa-chevron-right"></i>
                         Insights
                     </a>
@@ -1417,11 +1429,11 @@
                     <i class="fa-solid fa-phone"></i>
 
                     <div>
-                        <!-- <a href="tel:+233000000000">
+                        <!-- <a href="tel:+233241417656">
                             +233 (0)00 000 0000
                         </a> -->
 
-                        <a href="tel:+233000000000">
+                        <a href="tel:+233241417656">
                             +233 0241417656
                         </a>
                     </div>
@@ -1445,35 +1457,35 @@
             <div class="footer-socials">
 
                 <a
-                    href="#"
+                    href="contact.html"
                     aria-label="Facebook"
                 >
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
 
                 <a
-                    href="#"
+                    href="contact.html"
                     aria-label="X"
                 >
                     <i class="fa-brands fa-x-twitter"></i>
                 </a>
 
                 <a
-                    href="#"
+                    href="contact.html"
                     aria-label="LinkedIn"
                 >
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
 
                 <a
-                    href="#"
+                    href="contact.html"
                     aria-label="Instagram"
                 >
                     <i class="fa-brands fa-instagram"></i>
                 </a>
 
                 <a
-                    href="#"
+                    href="contact.html"
                     aria-label="YouTube"
                 >
                     <i class="fa-brands fa-youtube"></i>
@@ -1500,11 +1512,11 @@
 
             <div class="footer-legal">
 
-                <a href="#">
+                <a href="privacy-policy.html">
                     Privacy Policy
                 </a>
 
-                <a href="#">
+                <a href="terms.html">
                     Terms & Conditions
                 </a>
 
@@ -1546,4 +1558,3 @@
 <script src="js/accordion.js"></script>
 </body>
 </html>
-
