@@ -772,7 +772,7 @@ body {
 .about-hero-bottom {
     display: flex;
 
-    align-items: ;
+    /* align-items: ; */
 
     justify-content: space-between;
 
