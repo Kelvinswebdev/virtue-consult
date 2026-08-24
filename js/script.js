@@ -1,474 +1,540 @@
-// const videos = document.querySelectorAll(".hero-video");
+const videos = document.querySelectorAll(".hero-video");
 
-// const indicators = document.querySelectorAll(".indicator");
+const indicators = document.querySelectorAll(".indicator");
 
-// const nextButton = document.querySelector(".next");
-// const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+const prevButton = document.querySelector(".prev");
 
-// const title = document.getElementById("hero-title");
-// const description = document.getElementById("hero-description");
+const title = document.getElementById("hero-title");
+const description = document.getElementById("hero-description");
 
 
-// const slides = [
+const slides = [
 
-//     {
-//         title: "Building Businesses<br>That Last.",
+    {
+        title: "Building Businesses<br>That Last.",
 
-//         description:
-//             "We help organizations make better decisions, strengthen their operations and create sustainable growth."
-//     },
+        description:
+            "We help organizations make better decisions, strengthen their operations and create sustainable growth."
+    },
 
-//     {
-//         title: "Strategy That<br>Moves Forward.",
+    {
+        title: "Strategy That<br>Moves Forward.",
 
-//         description:
-//             "Turning complex challenges into clear strategies that create measurable business impact."
-//     },
+        description:
+            "Turning complex challenges into clear strategies that create measurable business impact."
+    },
 
-//     {
-//         title: "Creating Growth<br>With Purpose.",
+    {
+        title: "Creating Growth<br>With Purpose.",
 
-//         description:
-//             "We work with ambitious organizations to build stronger brands, systems and sustainable futures."
-//     }
+        description:
+            "We work with ambitious organizations to build stronger brands, systems and sustainable futures."
+    }
 
-// ];
+];
 
 
-// let currentSlide = 0;
+let currentSlide = 0;
 
-// let slideTimer;
+let slideTimer;
 
-// const slideDuration = 6000;
+const slideDuration = 6000;
 
 
-// /* =========================
-//    SHOW SLIDE
-// ========================= */
+/* =========================
+   SHOW SLIDE
+========================= */
 
-// function showSlide(index) {
+function showSlide(index) {
 
-//     currentSlide = index;
+    currentSlide = index;
 
-//     videos.forEach((video, i) => {
+    videos.forEach((video, i) => {
 
-//         video.classList.toggle(
-//             "active",
-//             i === currentSlide
-//         );
+        video.classList.toggle(
+            "active",
+            i === currentSlide
+        );
 
-//     });
+    });
 
 
-//     indicators.forEach((indicator, i) => {
+    indicators.forEach((indicator, i) => {
 
-//         indicator.classList.toggle(
-//             "active",
-//             i === currentSlide
-//         );
+        indicator.classList.toggle(
+            "active",
+            i === currentSlide
+        );
 
-//     });
+    });
 
 
-//     title.innerHTML = slides[currentSlide].title;
+    title.innerHTML = slides[currentSlide].title;
 
-//     description.textContent =
-//         slides[currentSlide].description;
+    description.textContent =
+        slides[currentSlide].description;
 
 
-//     videos[currentSlide].currentTime = 0;
+    videos[currentSlide].currentTime = 0;
 
-//     videos[currentSlide].play()
-//         .catch(() => {});
+    videos[currentSlide].play()
+        .catch(() => {});
 
 
-//     resetTimer();
+    resetTimer();
 
-// }
+}
 
 
-// /* =========================
-//    NEXT
-// ========================= */
+/* =========================
+   NEXT
+========================= */
 
-// function nextSlide() {
+function nextSlide() {
 
-//     let next =
-//         (currentSlide + 1) % videos.length;
+    let next =
+        (currentSlide + 1) % videos.length;
 
-//     showSlide(next);
+    showSlide(next);
 
-// }
+}
 
 
-// /* =========================
-//    PREVIOUS
-// ========================= */
+/* =========================
+   PREVIOUS
+========================= */
 
-// function previousSlide() {
+function previousSlide() {
 
-//     let previous =
-//         (currentSlide - 1 + videos.length)
-//         % videos.length;
+    let previous =
+        (currentSlide - 1 + videos.length)
+        % videos.length;
 
-//     showSlide(previous);
+    showSlide(previous);
 
-// }
+}
 
 
-// /* =========================
-//    TIMER
-// ========================= */
+/* =========================
+   TIMER
+========================= */
 
-// function resetTimer() {
+function resetTimer() {
 
-//     clearTimeout(slideTimer);
+    clearTimeout(slideTimer);
 
-//     slideTimer = setTimeout(
-//         nextSlide,
-//         slideDuration
-//     );
+    slideTimer = setTimeout(
+        nextSlide,
+        slideDuration
+    );
 
-// }
+}
 
 
-// /* =========================
-//    BUTTONS
-// ========================= */
+/* =========================
+   BUTTONS
+========================= */
 
-// nextButton.addEventListener(
-//     "click",
-//     nextSlide
-// );
+nextButton.addEventListener(
+    "click",
+    nextSlide
+);
 
 
-// prevButton.addEventListener(
-//     "click",
-//     previousSlide
-// );
+prevButton.addEventListener(
+    "click",
+    previousSlide
+);
 
 
-// /* =========================
-//    INDICATORS
-// ========================= */
+/* =========================
+   INDICATORS
+========================= */
 
-// indicators.forEach(
-//     (indicator, index) => {
+indicators.forEach(
+    (indicator, index) => {
 
-//         indicator.addEventListener(
-//             "click",
-//             () => showSlide(index)
-//         );
+        indicator.addEventListener(
+            "click",
+            () => showSlide(index)
+        );
 
-//     }
-// );
+    }
+);
 
 
-// /* =========================
-//    VIDEO END
-// ========================= */
+/* =========================
+   VIDEO END
+========================= */
 
-// videos.forEach(video => {
+videos.forEach(video => {
 
-//     video.addEventListener(
-//         "ended",
-//         nextSlide
-//     );
+    video.addEventListener(
+        "ended",
+        nextSlide
+    );
 
-// });
+});
 
 
-// /* =========================
-//    START
-// ========================= */
+/* =========================
+   START
+========================= */
 
-// showSlide(0);
+showSlide(0);
 
 
 
 
 
-// /* =========================
-//    MOBILE MENU
-// ========================= */
 
-// const menuToggle = document.querySelector(".menu-toggle");
-// const menuClose = document.querySelector(".menu-close");
-// const mobileMenu = document.querySelector(".mobile-menu");
-// const mobileLinks = document.querySelectorAll(".mobile-links a");
 
+/* =========================
+   NUMBER COUNTERS
+========================= */
 
-// function openMenu() {
+const counters = document.querySelectorAll("[data-count]");
 
-//     mobileMenu.classList.add("open");
+const counterObserver = new IntersectionObserver(
+    (entries) => {
 
-//     document.body.style.overflow = "hidden";
+        entries.forEach(entry => {
 
-// }
+            if (!entry.isIntersecting) return;
 
+            const counter = entry.target;
 
-// function closeMenu() {
+            const target = Number(
+                counter.getAttribute("data-count")
+            );
 
-//     mobileMenu.classList.remove("open");
+            let current = 0;
 
-//     document.body.style.overflow = "";
+            const duration = 1800;
 
-// }
+            const startTime = performance.now();
 
 
-// menuToggle.addEventListener(
-//     "click",
-//     openMenu
-// );
+            function updateCounter(currentTime) {
 
+                const progress =
+                    Math.min(
+                        (currentTime - startTime) / duration,
+                        1
+                    );
 
-// menuClose.addEventListener(
-//     "click",
-//     closeMenu
-// );
+                const ease =
+                    1 - Math.pow(1 - progress, 3);
 
+                current = Math.floor(target * ease);
 
-// mobileLinks.forEach(link => {
+                counter.textContent = current;
 
-//     link.addEventListener(
-//         "click",
-//         closeMenu
-//     );
+                if (progress < 1) {
 
-// });
+                    requestAnimationFrame(updateCounter);
 
+                } else {
 
+                    counter.textContent = target;
 
-// /* =========================
-//    SCROLL REVEAL
-// ========================= */
+                }
 
-// const revealElements = document.querySelectorAll(
-//     ".reveal-up, .reveal-left"
-// );
+            }
 
-// const revealObserver = new IntersectionObserver(
-//     (entries) => {
+            requestAnimationFrame(updateCounter);
 
-//         entries.forEach(entry => {
+            counterObserver.unobserve(counter);
 
-//             if (entry.isIntersecting) {
+        });
 
-//                 entry.target.classList.add("active");
+    },
+    {
+        threshold: 0.5
+    }
+);
 
-//                 revealObserver.unobserve(entry.target);
-//             }
 
-//         });
+counters.forEach(counter => {
+    counterObserver.observe(counter);
+});
 
-//     },
-//     {
-//         threshold: 0.15
-//     }
-// );
 
 
-// revealElements.forEach(element => {
-//     revealObserver.observe(element);
-// });
 
 
-// /* =========================
-//    NUMBER COUNTERS
-// ========================= */
 
-// const counters = document.querySelectorAll("[data-count]");
 
-// const counterObserver = new IntersectionObserver(
-//     (entries) => {
 
-//         entries.forEach(entry => {
 
-//             if (!entry.isIntersecting) return;
+/* =========================
+   PERSPECTIVE REVEAL
+========================= */
 
-//             const counter = entry.target;
+const perspectiveSection =
+    document.querySelector(".perspective-section");
 
-//             const target = Number(
-//                 counter.getAttribute("data-count")
-//             );
 
-//             let current = 0;
+const perspectiveElements = [
+    perspectiveSection.querySelector(".perspective-mark"),
+    perspectiveSection.querySelector("h2"),
+    perspectiveSection.querySelector(".perspective-right")
+];
 
-//             const duration = 1800;
 
-//             const startTime = performance.now();
+perspectiveElements.forEach(element => {
 
+    element.style.opacity = "0";
 
-//             function updateCounter(currentTime) {
+    element.style.transform =
+        "translateY(35px)";
 
-//                 const progress =
-//                     Math.min(
-//                         (currentTime - startTime) / duration,
-//                         1
-//                     );
+    element.style.transition =
+        "opacity 0.9s ease, transform 0.9s ease";
 
-//                 const ease =
-//                     1 - Math.pow(1 - progress, 3);
+});
 
-//                 current = Math.floor(target * ease);
 
-//                 counter.textContent = current;
+const perspectiveObserver =
+    new IntersectionObserver(
+        entries => {
 
-//                 if (progress < 1) {
+            entries.forEach(entry => {
 
-//                     requestAnimationFrame(updateCounter);
+                if (!entry.isIntersecting) return;
 
-//                 } else {
 
-//                     counter.textContent = target;
+                perspectiveElements.forEach(
+                    (element, index) => {
 
-//                 }
+                        setTimeout(() => {
 
-//             }
+                            element.style.opacity = "1";
 
-//             requestAnimationFrame(updateCounter);
+                            element.style.transform =
+                                "translateY(0)";
 
-//             counterObserver.unobserve(counter);
+                        }, index * 180);
 
-//         });
+                    }
+                );
 
-//     },
-//     {
-//         threshold: 0.5
-//     }
-// );
 
+                perspectiveObserver.unobserve(
+                    entry.target
+                );
 
-// counters.forEach(counter => {
-//     counterObserver.observe(counter);
-// });
+            });
 
+        },
+        {
+            threshold: 0.25
+        }
+    );
 
 
+perspectiveObserver.observe(
+    perspectiveSection
+);
 
 
 
 
 
 
-// /* =========================
-//    PERSPECTIVE REVEAL
-// ========================= */
 
-// const perspectiveSection =
-//     document.querySelector(".perspective-section");
 
 
-// const perspectiveElements = [
-//     perspectiveSection.querySelector(".perspective-mark"),
-//     perspectiveSection.querySelector("h2"),
-//     perspectiveSection.querySelector(".perspective-right")
-// ];
 
 
-// perspectiveElements.forEach(element => {
 
-//     element.style.opacity = "0";
 
-//     element.style.transform =
-//         "translateY(35px)";
 
-//     element.style.transition =
-//         "opacity 0.9s ease, transform 0.9s ease";
 
-// });
+const vmElements = document.querySelectorAll(
+    ".vm-heading, .vm-header > p, .vm-card, .vm-image"
+);
 
+const vmObserver = new IntersectionObserver(
+    (entries) => {
 
-// const perspectiveObserver =
-//     new IntersectionObserver(
-//         entries => {
+        entries.forEach((entry) => {
 
-//             entries.forEach(entry => {
+            if (entry.isIntersecting) {
 
-//                 if (!entry.isIntersecting) return;
+                entry.target.classList.add("show");
 
+                vmObserver.unobserve(entry.target);
 
-//                 perspectiveElements.forEach(
-//                     (element, index) => {
+            }
 
-//                         setTimeout(() => {
+        });
 
-//                             element.style.opacity = "1";
+    },
+    {
+        threshold: 0.15
+    }
+);
 
-//                             element.style.transform =
-//                                 "translateY(0)";
 
-//                         }, index * 180);
+vmElements.forEach((element, index) => {
 
-//                     }
-//                 );
+    element.style.transitionDelay = `${index * 0.08}s`;
 
+    vmObserver.observe(element);
 
-//                 perspectiveObserver.unobserve(
-//                     entry.target
-//                 );
+});
 
-//             });
 
-//         },
-//         {
-//             threshold: 0.25
-//         }
-//     );
+document.addEventListener("DOMContentLoaded", () => {
 
+    /* ==========================================
+       SCROLL REVEAL ANIMATIONS
+    ========================================== */
 
-// perspectiveObserver.observe(
-//     perspectiveSection
-// );
+    const revealElements = document.querySelectorAll(
+        ".reveal-up, .reveal-left, .reveal-right"
+    );
 
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
 
+            entries.forEach(entry => {
 
+                if (entry.isIntersecting) {
 
+                    entry.target.classList.add("revealed");
 
+                    observer.unobserve(entry.target);
+                }
 
+            });
 
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -60px 0px"
+        }
+    );
 
 
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
+    });
 
 
 
+    /* ==========================================
+       COUNTER ANIMATION
+    ========================================== */
 
+    const counters = document.querySelectorAll("[data-count]");
 
+    const counterObserver = new IntersectionObserver(
+        (entries, observer) => {
 
-// const vmElements = document.querySelectorAll(
-//     ".vm-heading, .vm-header > p, .vm-card, .vm-image"
-// );
+            entries.forEach(entry => {
 
-// const vmObserver = new IntersectionObserver(
-//     (entries) => {
+                if (!entry.isIntersecting) return;
 
-//         entries.forEach((entry) => {
+                const counter = entry.target;
 
-//             if (entry.isIntersecting) {
+                const target = Number(
+                    counter.getAttribute("data-count")
+                );
 
-//                 entry.target.classList.add("show");
+                let current = 0;
 
-//                 vmObserver.unobserve(entry.target);
+                const duration = 1800;
 
-//             }
+                const startTime = performance.now();
 
-//         });
 
-//     },
-//     {
-//         threshold: 0.15
-//     }
-// );
+                function updateCounter(currentTime) {
 
+                    const elapsed =
+                        currentTime - startTime;
 
-// vmElements.forEach((element, index) => {
+                    const progress =
+                        Math.min(elapsed / duration, 1);
 
-//     element.style.transitionDelay = `${index * 0.08}s`;
 
-//     vmObserver.observe(element);
+                    // Smooth easing
+                    const easedProgress =
+                        1 - Math.pow(1 - progress, 3);
 
-// });
 
+                    current =
+                        Math.floor(
+                            easedProgress * target
+                        );
+
+
+                    counter.textContent = current;
+
+
+                    if (progress < 1) {
+
+                        requestAnimationFrame(
+                            updateCounter
+                        );
+
+                    } else {
+
+                        counter.textContent = target;
+
+                    }
+
+                }
+
+
+                requestAnimationFrame(updateCounter);
+
+                observer.unobserve(counter);
+
+            });
+
+        },
+        {
+            threshold: 0.5
+        }
+    );
+
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+
+
+
+    /* ==========================================
+       STAGGERED REVEAL DELAYS
+    ========================================== */
+
+    const delayElements =
+        document.querySelectorAll(
+            ".delay-1, .delay-2, .delay-3"
+        );
+
+
+    delayElements.forEach(element => {
+
+        if (element.classList.contains("delay-1")) {
+            element.style.transitionDelay = "0.15s";
+        }
+
+        if (element.classList.contains("delay-2")) {
+            element.style.transitionDelay = "0.30s";
+        }
+
+        if (element.classList.contains("delay-3")) {
+            element.style.transitionDelay = "0.45s";
+        }
+
+    });
+
+});
 
 
 
