@@ -1,347 +1,347 @@
-const videos = document.querySelectorAll(".hero-video");
+// const videos = document.querySelectorAll(".hero-video");
 
-const indicators = document.querySelectorAll(".indicator");
+// const indicators = document.querySelectorAll(".indicator");
 
-const nextButton = document.querySelector(".next");
-const prevButton = document.querySelector(".prev");
+// const nextButton = document.querySelector(".next");
+// const prevButton = document.querySelector(".prev");
 
-const title = document.getElementById("hero-title");
-const description = document.getElementById("hero-description");
+// const title = document.getElementById("hero-title");
+// const description = document.getElementById("hero-description");
 
 
-const slides = [
+// const slides = [
 
-    {
-        title: "Building Businesses<br>That Last.",
+//     {
+//         title: "Building Businesses<br>That Last.",
 
-        description:
-            "We help organizations make better decisions, strengthen their operations and create sustainable growth."
-    },
+//         description:
+//             "We help organizations make better decisions, strengthen their operations and create sustainable growth."
+//     },
 
-    {
-        title: "Strategy That<br>Moves Forward.",
+//     {
+//         title: "Strategy That<br>Moves Forward.",
 
-        description:
-            "Turning complex challenges into clear strategies that create measurable business impact."
-    },
+//         description:
+//             "Turning complex challenges into clear strategies that create measurable business impact."
+//     },
 
-    {
-        title: "Creating Growth<br>With Purpose.",
+//     {
+//         title: "Creating Growth<br>With Purpose.",
 
-        description:
-            "We work with ambitious organizations to build stronger brands, systems and sustainable futures."
-    }
+//         description:
+//             "We work with ambitious organizations to build stronger brands, systems and sustainable futures."
+//     }
 
-];
+// ];
 
 
-let currentSlide = 0;
+// let currentSlide = 0;
 
-let slideTimer;
+// let slideTimer;
 
-const slideDuration = 6000;
+// const slideDuration = 6000;
 
 
-/* =========================
-   SHOW SLIDE
-========================= */
+// /* =========================
+//    SHOW SLIDE
+// ========================= */
 
-function showSlide(index) {
+// function showSlide(index) {
 
-    currentSlide = index;
+//     currentSlide = index;
 
-    videos.forEach((video, i) => {
+//     videos.forEach((video, i) => {
 
-        video.classList.toggle(
-            "active",
-            i === currentSlide
-        );
+//         video.classList.toggle(
+//             "active",
+//             i === currentSlide
+//         );
 
-    });
+//     });
 
 
-    indicators.forEach((indicator, i) => {
+//     indicators.forEach((indicator, i) => {
 
-        indicator.classList.toggle(
-            "active",
-            i === currentSlide
-        );
+//         indicator.classList.toggle(
+//             "active",
+//             i === currentSlide
+//         );
 
-    });
+//     });
 
 
-    title.innerHTML = slides[currentSlide].title;
+//     title.innerHTML = slides[currentSlide].title;
 
-    description.textContent =
-        slides[currentSlide].description;
+//     description.textContent =
+//         slides[currentSlide].description;
 
 
-    videos[currentSlide].currentTime = 0;
+//     videos[currentSlide].currentTime = 0;
 
-    videos[currentSlide].play()
-        .catch(() => {});
+//     videos[currentSlide].play()
+//         .catch(() => {});
 
 
-    resetTimer();
+//     resetTimer();
 
-}
+// }
 
 
-/* =========================
-   NEXT
-========================= */
+// /* =========================
+//    NEXT
+// ========================= */
 
-function nextSlide() {
+// function nextSlide() {
 
-    let next =
-        (currentSlide + 1) % videos.length;
+//     let next =
+//         (currentSlide + 1) % videos.length;
 
-    showSlide(next);
+//     showSlide(next);
 
-}
+// }
 
 
-/* =========================
-   PREVIOUS
-========================= */
+// /* =========================
+//    PREVIOUS
+// ========================= */
 
-function previousSlide() {
+// function previousSlide() {
 
-    let previous =
-        (currentSlide - 1 + videos.length)
-        % videos.length;
+//     let previous =
+//         (currentSlide - 1 + videos.length)
+//         % videos.length;
 
-    showSlide(previous);
+//     showSlide(previous);
 
-}
+// }
 
 
-/* =========================
-   TIMER
-========================= */
+// /* =========================
+//    TIMER
+// ========================= */
 
-function resetTimer() {
+// function resetTimer() {
 
-    clearTimeout(slideTimer);
+//     clearTimeout(slideTimer);
 
-    slideTimer = setTimeout(
-        nextSlide,
-        slideDuration
-    );
+//     slideTimer = setTimeout(
+//         nextSlide,
+//         slideDuration
+//     );
 
-}
+// }
 
 
-/* =========================
-   BUTTONS
-========================= */
+// /* =========================
+//    BUTTONS
+// ========================= */
 
-nextButton.addEventListener(
-    "click",
-    nextSlide
-);
+// nextButton.addEventListener(
+//     "click",
+//     nextSlide
+// );
 
 
-prevButton.addEventListener(
-    "click",
-    previousSlide
-);
+// prevButton.addEventListener(
+//     "click",
+//     previousSlide
+// );
 
 
-/* =========================
-   INDICATORS
-========================= */
+// /* =========================
+//    INDICATORS
+// ========================= */
 
-indicators.forEach(
-    (indicator, index) => {
+// indicators.forEach(
+//     (indicator, index) => {
 
-        indicator.addEventListener(
-            "click",
-            () => showSlide(index)
-        );
+//         indicator.addEventListener(
+//             "click",
+//             () => showSlide(index)
+//         );
 
-    }
-);
+//     }
+// );
 
 
-/* =========================
-   VIDEO END
-========================= */
+// /* =========================
+//    VIDEO END
+// ========================= */
 
-videos.forEach(video => {
+// videos.forEach(video => {
 
-    video.addEventListener(
-        "ended",
-        nextSlide
-    );
+//     video.addEventListener(
+//         "ended",
+//         nextSlide
+//     );
 
-});
+// });
 
 
-/* =========================
-   START
-========================= */
+// /* =========================
+//    START
+// ========================= */
 
-showSlide(0);
+// showSlide(0);
 
 
 
 
 
-/* =========================
-   MOBILE MENU
-========================= */
+// /* =========================
+//    MOBILE MENU
+// ========================= */
 
-const menuToggle = document.querySelector(".menu-toggle");
-const menuClose = document.querySelector(".menu-close");
-const mobileMenu = document.querySelector(".mobile-menu");
-const mobileLinks = document.querySelectorAll(".mobile-links a");
+// const menuToggle = document.querySelector(".menu-toggle");
+// const menuClose = document.querySelector(".menu-close");
+// const mobileMenu = document.querySelector(".mobile-menu");
+// const mobileLinks = document.querySelectorAll(".mobile-links a");
 
 
-function openMenu() {
+// function openMenu() {
 
-    mobileMenu.classList.add("open");
+//     mobileMenu.classList.add("open");
 
-    document.body.style.overflow = "hidden";
+//     document.body.style.overflow = "hidden";
 
-}
+// }
 
 
-function closeMenu() {
+// function closeMenu() {
 
-    mobileMenu.classList.remove("open");
+//     mobileMenu.classList.remove("open");
 
-    document.body.style.overflow = "";
+//     document.body.style.overflow = "";
 
-}
+// }
 
 
-menuToggle.addEventListener(
-    "click",
-    openMenu
-);
+// menuToggle.addEventListener(
+//     "click",
+//     openMenu
+// );
 
 
-menuClose.addEventListener(
-    "click",
-    closeMenu
-);
+// menuClose.addEventListener(
+//     "click",
+//     closeMenu
+// );
 
 
-mobileLinks.forEach(link => {
+// mobileLinks.forEach(link => {
 
-    link.addEventListener(
-        "click",
-        closeMenu
-    );
+//     link.addEventListener(
+//         "click",
+//         closeMenu
+//     );
 
-});
+// });
 
 
 
-/* =========================
-   SCROLL REVEAL
-========================= */
+// /* =========================
+//    SCROLL REVEAL
+// ========================= */
 
-const revealElements = document.querySelectorAll(
-    ".reveal-up, .reveal-left"
-);
+// const revealElements = document.querySelectorAll(
+//     ".reveal-up, .reveal-left"
+// );
 
-const revealObserver = new IntersectionObserver(
-    (entries) => {
+// const revealObserver = new IntersectionObserver(
+//     (entries) => {
 
-        entries.forEach(entry => {
+//         entries.forEach(entry => {
 
-            if (entry.isIntersecting) {
+//             if (entry.isIntersecting) {
 
-                entry.target.classList.add("active");
+//                 entry.target.classList.add("active");
 
-                revealObserver.unobserve(entry.target);
-            }
+//                 revealObserver.unobserve(entry.target);
+//             }
 
-        });
+//         });
 
-    },
-    {
-        threshold: 0.15
-    }
-);
+//     },
+//     {
+//         threshold: 0.15
+//     }
+// );
 
 
-revealElements.forEach(element => {
-    revealObserver.observe(element);
-});
+// revealElements.forEach(element => {
+//     revealObserver.observe(element);
+// });
 
 
-/* =========================
-   NUMBER COUNTERS
-========================= */
+// /* =========================
+//    NUMBER COUNTERS
+// ========================= */
 
-const counters = document.querySelectorAll("[data-count]");
+// const counters = document.querySelectorAll("[data-count]");
 
-const counterObserver = new IntersectionObserver(
-    (entries) => {
+// const counterObserver = new IntersectionObserver(
+//     (entries) => {
 
-        entries.forEach(entry => {
+//         entries.forEach(entry => {
 
-            if (!entry.isIntersecting) return;
+//             if (!entry.isIntersecting) return;
 
-            const counter = entry.target;
+//             const counter = entry.target;
 
-            const target = Number(
-                counter.getAttribute("data-count")
-            );
+//             const target = Number(
+//                 counter.getAttribute("data-count")
+//             );
 
-            let current = 0;
+//             let current = 0;
 
-            const duration = 1800;
+//             const duration = 1800;
 
-            const startTime = performance.now();
+//             const startTime = performance.now();
 
 
-            function updateCounter(currentTime) {
+//             function updateCounter(currentTime) {
 
-                const progress =
-                    Math.min(
-                        (currentTime - startTime) / duration,
-                        1
-                    );
+//                 const progress =
+//                     Math.min(
+//                         (currentTime - startTime) / duration,
+//                         1
+//                     );
 
-                const ease =
-                    1 - Math.pow(1 - progress, 3);
+//                 const ease =
+//                     1 - Math.pow(1 - progress, 3);
 
-                current = Math.floor(target * ease);
+//                 current = Math.floor(target * ease);
 
-                counter.textContent = current;
+//                 counter.textContent = current;
 
-                if (progress < 1) {
+//                 if (progress < 1) {
 
-                    requestAnimationFrame(updateCounter);
+//                     requestAnimationFrame(updateCounter);
 
-                } else {
+//                 } else {
 
-                    counter.textContent = target;
+//                     counter.textContent = target;
 
-                }
+//                 }
 
-            }
+//             }
 
-            requestAnimationFrame(updateCounter);
+//             requestAnimationFrame(updateCounter);
 
-            counterObserver.unobserve(counter);
+//             counterObserver.unobserve(counter);
 
-        });
+//         });
 
-    },
-    {
-        threshold: 0.5
-    }
-);
+//     },
+//     {
+//         threshold: 0.5
+//     }
+// );
 
 
-counters.forEach(counter => {
-    counterObserver.observe(counter);
-});
+// counters.forEach(counter => {
+//     counterObserver.observe(counter);
+// });
 
 
 
@@ -351,75 +351,75 @@ counters.forEach(counter => {
 
 
 
-/* =========================
-   PERSPECTIVE REVEAL
-========================= */
+// /* =========================
+//    PERSPECTIVE REVEAL
+// ========================= */
 
-const perspectiveSection =
-    document.querySelector(".perspective-section");
+// const perspectiveSection =
+//     document.querySelector(".perspective-section");
 
 
-const perspectiveElements = [
-    perspectiveSection.querySelector(".perspective-mark"),
-    perspectiveSection.querySelector("h2"),
-    perspectiveSection.querySelector(".perspective-right")
-];
+// const perspectiveElements = [
+//     perspectiveSection.querySelector(".perspective-mark"),
+//     perspectiveSection.querySelector("h2"),
+//     perspectiveSection.querySelector(".perspective-right")
+// ];
 
 
-perspectiveElements.forEach(element => {
+// perspectiveElements.forEach(element => {
 
-    element.style.opacity = "0";
+//     element.style.opacity = "0";
 
-    element.style.transform =
-        "translateY(35px)";
+//     element.style.transform =
+//         "translateY(35px)";
 
-    element.style.transition =
-        "opacity 0.9s ease, transform 0.9s ease";
+//     element.style.transition =
+//         "opacity 0.9s ease, transform 0.9s ease";
 
-});
+// });
 
 
-const perspectiveObserver =
-    new IntersectionObserver(
-        entries => {
+// const perspectiveObserver =
+//     new IntersectionObserver(
+//         entries => {
 
-            entries.forEach(entry => {
+//             entries.forEach(entry => {
 
-                if (!entry.isIntersecting) return;
+//                 if (!entry.isIntersecting) return;
 
 
-                perspectiveElements.forEach(
-                    (element, index) => {
+//                 perspectiveElements.forEach(
+//                     (element, index) => {
 
-                        setTimeout(() => {
+//                         setTimeout(() => {
 
-                            element.style.opacity = "1";
+//                             element.style.opacity = "1";
 
-                            element.style.transform =
-                                "translateY(0)";
+//                             element.style.transform =
+//                                 "translateY(0)";
 
-                        }, index * 180);
+//                         }, index * 180);
 
-                    }
-                );
+//                     }
+//                 );
 
 
-                perspectiveObserver.unobserve(
-                    entry.target
-                );
+//                 perspectiveObserver.unobserve(
+//                     entry.target
+//                 );
 
-            });
+//             });
 
-        },
-        {
-            threshold: 0.25
-        }
-    );
+//         },
+//         {
+//             threshold: 0.25
+//         }
+//     );
 
 
-perspectiveObserver.observe(
-    perspectiveSection
-);
+// perspectiveObserver.observe(
+//     perspectiveSection
+// );
 
 
 
@@ -435,39 +435,39 @@ perspectiveObserver.observe(
 
 
 
-const vmElements = document.querySelectorAll(
-    ".vm-heading, .vm-header > p, .vm-card, .vm-image"
-);
+// const vmElements = document.querySelectorAll(
+//     ".vm-heading, .vm-header > p, .vm-card, .vm-image"
+// );
 
-const vmObserver = new IntersectionObserver(
-    (entries) => {
+// const vmObserver = new IntersectionObserver(
+//     (entries) => {
 
-        entries.forEach((entry) => {
+//         entries.forEach((entry) => {
 
-            if (entry.isIntersecting) {
+//             if (entry.isIntersecting) {
 
-                entry.target.classList.add("show");
+//                 entry.target.classList.add("show");
 
-                vmObserver.unobserve(entry.target);
+//                 vmObserver.unobserve(entry.target);
 
-            }
+//             }
 
-        });
+//         });
 
-    },
-    {
-        threshold: 0.15
-    }
-);
+//     },
+//     {
+//         threshold: 0.15
+//     }
+// );
 
 
-vmElements.forEach((element, index) => {
+// vmElements.forEach((element, index) => {
 
-    element.style.transitionDelay = `${index * 0.08}s`;
+//     element.style.transitionDelay = `${index * 0.08}s`;
 
-    vmObserver.observe(element);
+//     vmObserver.observe(element);
 
-});
+// });
 
 
 
