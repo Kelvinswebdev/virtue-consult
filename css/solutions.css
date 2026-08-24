@@ -238,10 +238,10 @@ body {
 .nav-dropdown.open .dropdown-menu {
     opacity: 1;
     visibility: visible;
-
+/* 
     transform:
         translateX(-50%)
-        translateY(0);
+        translateY(0); */
 }
 
 
