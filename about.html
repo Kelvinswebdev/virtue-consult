@@ -47,17 +47,15 @@
      NAVBAR
 ===================================================== -->
 
+    <!-- =========================
+     PREMIUM NAVBAR
+========================= -->
 <header class="site-header" id="site-header">
 
     <div class="nav-container">
 
         <!-- LOGO -->
-
-        <a
-            href="index.html"
-            class="nav-brand"
-            aria-label="Virtue Konsult Home"
-        >
+        <a href="index.html" class="nav-brand" aria-label="Virtue Konsult Home">
 
             <img
                 src="assets/images/virtue-logo.png"
@@ -69,31 +67,18 @@
 
 
         <!-- DESKTOP NAVIGATION -->
+        <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
 
-        <nav
-            class="main-nav"
-            id="main-nav"
-            aria-label="Main Navigation"
-        >
-
-            <a
-                href="index.html"
-                class="nav-link"
-            >
+            <a href="index.html" class="nav-link active">
                 Home
             </a>
 
-
-            <a
-                href="about.html"
-                class="nav-link active"
-            >
+            <a href="about.html" class="nav-link">
                 About
             </a>
 
 
-            <!-- EXPERTISE DROPDOWN -->
-
+            <!-- SERVICES DROPDOWN -->
             <div class="nav-dropdown">
 
                 <button
@@ -101,107 +86,63 @@
                     type="button"
                     aria-expanded="false"
                 >
-
                     Expertise
-
                     <i class="fa-solid fa-chevron-down"></i>
-
                 </button>
 
 
                 <div class="dropdown-menu">
 
                     <div class="dropdown-heading">
-
                         <span>OUR EXPERTISE</span>
-
-                        <p>
-                            Solutions built around your needs.
-                        </p>
-
+                        <p>Solutions built around your needs.</p>
                     </div>
 
 
-                    <a
-                        href="services.html#construction"
-                        class="dropdown-item"
-                    >
+                    <a href="construction.html" class="dropdown-item">
 
                         <span class="dropdown-icon">
                             <i class="fa-solid fa-building"></i>
                         </span>
 
                         <span class="dropdown-text">
-
-                            <strong>
-                                Construction & Infrastructure
-                            </strong>
-
-                            <small>
-                                Building and infrastructure solutions
-                            </small>
-
+                            <strong>Construction & Infrastructure</strong>
+                            <small>Building and infrastructure solutions</small>
                         </span>
 
-                        <span class="dropdown-arrow">
-                            ↗
-                        </span>
+                        <span class="dropdown-arrow">↗</span>
 
                     </a>
 
 
-                    <a
-                        href="services.html#consulting"
-                        class="dropdown-item"
-                    >
+                    <a href="consulting.html" class="dropdown-item">
 
                         <span class="dropdown-icon">
                             <i class="fa-solid fa-compass-drafting"></i>
                         </span>
 
                         <span class="dropdown-text">
-
-                            <strong>
-                                Strategic Consulting
-                            </strong>
-
-                            <small>
-                                Strategy, transformation and growth
-                            </small>
-
+                            <strong>Strategic Consulting</strong>
+                            <small>Strategy, transformation and growth</small>
                         </span>
 
-                        <span class="dropdown-arrow">
-                            ↗
-                        </span>
+                        <span class="dropdown-arrow">↗</span>
 
                     </a>
 
 
-                    <a
-                        href="services.html#hospitality"
-                        class="dropdown-item"
-                    >
+                    <a href="hospitality.html" class="dropdown-item">
 
                         <span class="dropdown-icon">
                             <i class="fa-solid fa-hotel"></i>
                         </span>
 
                         <span class="dropdown-text">
-
-                            <strong>
-                                Hospitality & Experiences
-                            </strong>
-
-                            <small>
-                                Creating meaningful experiences
-                            </small>
-
+                            <strong>Hospitality & Experiences</strong>
+                            <small>Creating meaningful experiences</small>
                         </span>
 
-                        <span class="dropdown-arrow">
-                            ↗
-                        </span>
+                        <span class="dropdown-arrow">↗</span>
 
                     </a>
 
@@ -209,11 +150,8 @@
                     <div class="dropdown-footer">
 
                         <a href="services.html">
-
                             View All Services
-
                             <span>→</span>
-
                         </a>
 
                     </div>
@@ -223,40 +161,27 @@
             </div>
 
 
-            <a
-                href="services.html"
-                class="nav-link"
-            >
-                Services
+            <a href="#expertise" class="nav-link">
+                Solutions
             </a>
 
 
-            <a
-                href="insights.html"
-                class="nav-link"
-            >
+            <!-- <a href="#insights" class="nav-link">
                 Insights
-            </a>
+            </a> -->
 
 
-            <a
-                href="#contact"
-                class="nav-link"
-            >
-                Contact
-            </a>
+            <!-- <a href="#partners" class="nav-link">
+                Partners
+            </a> -->
 
         </nav>
 
 
-        <!-- NAV ACTION -->
-
+        <!-- RIGHT SIDE -->
         <div class="nav-actions">
 
-            <a
-                href="#contact"
-                class="nav-cta"
-            >
+            <a href="#contact" class="nav-cta">
 
                 <span>
                     Start a Conversation
@@ -267,6 +192,7 @@
             </a>
 
 
+            <!-- MOBILE MENU BUTTON -->
             <button
                 class="menu-toggle"
                 id="menu-toggle"
