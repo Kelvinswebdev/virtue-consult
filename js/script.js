@@ -538,3 +538,64 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* =========================
+     REVEAL ANIMATIONS
+  ========================= */
+
+  const reveals = document.querySelectorAll(".reveal-up, .reveal-left");
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  reveals.forEach(item => revealObserver.observe(item));
+
+
+  /* =========================
+     NUMBER COUNTERS
+  ========================= */
+
+  const counters = document.querySelectorAll("[data-count]");
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+
+      if (!entry.isIntersecting) return;
+
+      const counter = entry.target;
+      const target = Number(counter.dataset.count);
+      let current = 0;
+
+      const duration = 1500;
+      const step = target / (duration / 20);
+
+      const updateCounter = () => {
+        current += step;
+
+        if (current < target) {
+          counter.textContent = Math.floor(current);
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target;
+        }
+      };
+
+      updateCounter();
+      counterObserver.unobserve(counter);
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  counters.forEach(counter => counterObserver.observe(counter));
+
+});

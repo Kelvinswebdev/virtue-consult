@@ -1482,9 +1482,9 @@ body {
 
     background: white;
 
-    border: 1px solid #edf0f4;
+    /* border: 1px solid #edf0f4; */
 
-    box-shadow: 0 15px 50px rgba(0,0,0,.06);
+    /* box-shadow: 0 15px 50px rgba(0,0,0,.06); */
 }
 
 .stat {
@@ -1526,14 +1526,7 @@ body {
    ANIMATIONS
 ========================= */
 
-.reveal-up,
-.reveal-left {
-    opacity: 0;
 
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-}
 
 .reveal-up {
     transform: translateY(50px);
