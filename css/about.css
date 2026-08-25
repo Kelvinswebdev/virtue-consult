@@ -3,6 +3,14 @@
    ABOUT PAGE
 ===================================================== */
 
+.nav-actions a {
+    background-color: #ffae00;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
 .about-page {
     background: #f5f4f0;
     color: #18201b;

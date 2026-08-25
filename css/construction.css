@@ -102,6 +102,13 @@ body {
 /* =========================================
    MAIN NAV
 ========================================= */
+.nav-actions a {
+    background-color: #ffae00;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
 
 .main-nav {
     display: flex;

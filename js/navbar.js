@@ -70,7 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================================
-       MOBILE DROPDOWN
+       EXPERTISE DROPDOWN
+       CLICK TO OPEN — DESKTOP & MOBILE
     ========================================= */
 
     if (dropdown && dropdownTrigger) {
@@ -79,20 +80,16 @@ document.addEventListener("DOMContentLoaded", function () {
             "click",
             function (event) {
 
-                if (window.innerWidth <= 850) {
+                event.preventDefault();
+                event.stopPropagation();
 
-                    event.preventDefault();
-                    event.stopPropagation();
+                const isOpen =
+                    dropdown.classList.toggle("open");
 
-                    const isOpen =
-                        dropdown.classList.toggle("open");
-
-                    dropdownTrigger.setAttribute(
-                        "aria-expanded",
-                        String(isOpen)
-                    );
-
-                }
+                dropdownTrigger.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
 
             }
         );
@@ -116,14 +113,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (window.innerWidth <= 850) {
 
-                mainNav.classList.remove("active");
+                if (mainNav) {
+                    mainNav.classList.remove("active");
+                }
 
-                menuToggle.classList.remove("active");
+                if (menuToggle) {
+                    menuToggle.classList.remove("active");
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+                }
 
                 document.body.classList.remove(
                     "menu-open"
@@ -137,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================================
-       CLOSE DROPDOWN OUTSIDE
+       CLOSE DROPDOWN WHEN CLICKING OUTSIDE
     ========================================= */
 
     document.addEventListener("click", function (event) {
@@ -171,21 +172,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (window.innerWidth > 850) {
 
-            mainNav.classList.remove("active");
+            if (mainNav) {
+                mainNav.classList.remove("active");
+            }
 
-            menuToggle.classList.remove("active");
+            if (menuToggle) {
 
-            dropdown.classList.remove("open");
+                menuToggle.classList.remove("active");
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-            dropdownTrigger.setAttribute(
-                "aria-expanded",
-                "false"
-            );
+            }
+
+            if (dropdown) {
+                dropdown.classList.remove("open");
+            }
+
+            if (dropdownTrigger) {
+
+                dropdownTrigger.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
 
             document.body.classList.remove(
                 "menu-open"
