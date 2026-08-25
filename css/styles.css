@@ -13,6 +13,10 @@ body {
   padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 
 /* =========================================
@@ -4075,10 +4079,10 @@ body {
 .partner-logo img {
 
 
-    width: 200px;
+    width: 300px;
     height: auto;
 
-    object-fit: contain;
+    /* object-fit: contain; */
 
     /*
        Gives the section a cleaner corporate appearance.
