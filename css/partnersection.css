@@ -171,10 +171,10 @@
 
   .vk-client{
     width:360px;
-    min-height:106px;
+    height:150px;
     margin:22px 10px 0;
-    padding:22px 26px;
-    border:1px solid var(--line);
+    padding:7px 26px;
+    border:1px solid #d6dce3;
     border-radius:18px;
     background:rgba(255,255,255,.9);
     box-shadow:0 12px 30px rgba(23,79,137,.045);
@@ -198,9 +198,8 @@
     place-items:center;
     flex:0 0 auto;
     background:var(--blue-soft);
-    color:var(--blue);
-    font-weight:900;
-    font-size:20px;
+    /* font-weight:900; */
+    font-size:13px;
     letter-spacing:-.06em;
   }
 
