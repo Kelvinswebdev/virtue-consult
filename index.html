@@ -1034,7 +1034,14 @@
             </div>
 
 
-            <form class="inquiry-form" method="post">
+            <form
+                class="inquiry-form"
+                method="post"
+                action="https://formspree.io/f/moevqryk"
+            >
+
+                <input type="hidden" name="_subject" value="New Virtue Konsult Website Inquiry">
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
                 <!-- Name -->
                 <div class="form-group">
@@ -1154,6 +1161,8 @@
                     </span>
 
                 </button>
+
+                <div class="form-status" role="status" aria-live="polite"></div>
 
             </form>
 
@@ -1664,5 +1673,6 @@
 <script src="js/navbar.js"></script>
 <script src="js/script.js"></script>
 <script src="js/accordion.js"></script>
+<script src="js/form-handler.js"></script>
 </body>
 </html>

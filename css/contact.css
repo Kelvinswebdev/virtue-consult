@@ -1221,6 +1221,47 @@ body {
 }
 
 
+.contact-submit:disabled {
+    opacity: .6;
+
+    cursor: not-allowed;
+}
+
+
+.form-status {
+    display: none;
+
+    padding: 14px 16px;
+
+    border-radius: 3px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.form-status.is-visible {
+    display: block;
+}
+
+
+.form-status--success {
+    background: #eef1ec;
+
+    color: var(--contact-green);
+}
+
+
+.form-status--error {
+    background: #fbeceb;
+
+    color: #b3261e;
+}
+
+
 
 /* ==========================================================
    LOCATION

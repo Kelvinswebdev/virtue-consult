@@ -524,10 +524,12 @@
 
                 <form
                     class="contact-form"
-                    action="#"
+                    action="https://formspree.io/f/moevqryk"
                     method="POST"
                 >
 
+                    <input type="hidden" name="_subject" value="New Virtue Konsult Contact Inquiry">
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
                     <div class="form-row">
 
@@ -652,6 +654,8 @@
                         </span>
 
                     </button>
+
+                    <div class="form-status" role="status" aria-live="polite"></div>
 
                 </form>
 
@@ -1055,5 +1059,6 @@
 <script src="js/navbar.js"></script>
 <script src="js/script.js"></script>
 <script src="js/accordion.js"></script>
+<script src="js/form-handler.js"></script>
 </body>
 </html>

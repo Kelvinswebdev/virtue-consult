@@ -3525,6 +3525,49 @@ html {
 }
 
 
+.inquiry-button:disabled {
+    opacity: .6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+.form-status {
+    display: none;
+
+    padding: 14px 16px;
+
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.form-status.is-visible {
+    display: block;
+}
+
+
+.form-status--success {
+    background: #eaf1fb;
+
+    color: #09285d;
+}
+
+
+.form-status--error {
+    background: #fdecea;
+
+    color: #b3261e;
+}
+
+
 /* =========================================
    TABLET
 ========================================= */
