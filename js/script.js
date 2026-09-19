@@ -19,14 +19,14 @@ const slides = [
     },
 
     {
-        title: "Strategy That<br>Moves Forward.",
+        title: "Building With Purpose. Delivering With Precision.",
 
         description:
             "Turning complex challenges into clear strategies that create measurable business impact."
     },
 
     {
-        title: "Creating Growth<br>With Purpose.",
+        title: "Creating Spaces Designed <br> for Exceptional Experiences.",
 
         description:
             "We work with ambitious organizations to build stronger brands, systems and sustainable futures."
@@ -39,7 +39,7 @@ let currentSlide = 0;
 
 let slideTimer;
 
-const slideDuration = 6000;
+const slideDuration = 3000;
 
 
 /* =========================
