@@ -39,7 +39,7 @@ let currentSlide = 0;
 
 let slideTimer;
 
-const slideDuration = 3000;
+const slideDuration = 4000;
 
 
 /* =========================
