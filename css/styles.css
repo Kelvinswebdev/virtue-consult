@@ -795,13 +795,13 @@ html {
 
 
 .hero-content h1 {
-    font-size: clamp(60px, 8.5vw, 100px);
-    line-height: 0.95;
-    color: #fff;
-    text-align: center;
-    letter-spacing: -5px;
-    font-weight: lighter;
-    max-width: 1100px;
+  margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+color: #f9f9fa;
+  font-size: clamp(42px, 5.5vw, 70px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -3px;
 }
 
 
@@ -1312,14 +1312,14 @@ html {
 
     font-size: 14px;
 
-    font-weight: 800;
+    /* font-weight: 800; */
 
     letter-spacing: 1.5px;
 
     margin-bottom: 18px;
 
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
 
     gap: 12px;
 }
@@ -1334,23 +1334,19 @@ html {
 }
 
 .about-content h2 {
-    font-size: clamp(40px, 4vw, 62px);
-
-    line-height: 1.05;
-
-    color: #00224e;
-
-    margin: 0 0 25px;
-
-    font-weight: 800;
+  margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+color: #0a004c;
+  font-size: clamp(42px, 5.5vw, 70px);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: -3px;
 }
 
-.about-content h2 span {
-    color: #010058;
-}
+
 
 .intro {
-    font-size: 20px;
+    font-size: 13px;
 
     line-height: 1.7;
 
@@ -1524,6 +1520,11 @@ html {
     color: #071936;
 
     font-weight: 800;
+
+      margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+/* color: #0a004c; */
+
 }
 
 .stat span {
@@ -1531,7 +1532,8 @@ html {
 
     color: #ffae00;
 
-    font-weight: 800;
+    /* font-weight: 800; */
+
 }
 
 .stat p {
@@ -1584,9 +1586,18 @@ html {
 @media (max-width: 1000px) {
 
     .about-container {
-        grid-template-columns: 1fr;
-
+        display: flex;
+        flex-direction: column-reverse;
         gap: 80px;
+    }
+
+    .about-visual {
+        width: 100%;
+        gap:0;
+    }
+
+    .about-visual img{
+        width: 100%;
     }
 
     .contact-card {
@@ -1617,6 +1628,7 @@ html {
 
     .main-image {
         height: 400px;
+        width: 100%;
     }
 
     .contact-card {
