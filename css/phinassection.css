@@ -1,0 +1,620 @@
+/* =========================================
+   VIRTUE KONSULT
+   HOSPITALITY & EVENTS SERVICES
+========================================= */
+
+.vk-hospitality-services {
+  position: relative;
+  padding: 150px 0;
+  background: #f7faff;
+  overflow: hidden;
+  color: #092d59;
+}
+
+.vk-hospitality-services::before {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  top: -350px;
+  right: -250px;
+  border-radius: 50%;
+  border: 1px solid rgba(18, 104, 232, 0.06);
+  box-shadow:
+    0 0 0 55px rgba(18, 104, 232, 0.018),
+    0 0 0 110px rgba(18, 104, 232, 0.012);
+}
+
+.vk-hospitality-services::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  bottom: -280px;
+  left: -230px;
+  border-radius: 50%;
+  background: rgba(18, 104, 232, 0.035);
+}
+
+.vk-services-container {
+  width: min(1380px, calc(100% - 48px));
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.vk-services-header {
+  display: grid;
+  grid-template-columns: 0.75fr 2fr;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 110px;
+}
+
+.vk-services-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+
+  color: #5980aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .2em;
+}
+
+.vk-eyebrow-line {
+  width: 32px;
+  height: 2px;
+  background: #ef9a25;
+}
+
+.vk-services-heading-wrap {
+  max-width: 850px;
+}
+
+.vk-services-heading-wrap h2 {
+  margin: 0;
+
+  font-size: clamp(48px, 5.2vw, 76px);
+  line-height: .96;
+  letter-spacing: -.065em;
+  font-weight: 750;
+  color: #092d59;
+}
+
+.vk-services-heading-wrap h2 span {
+  display: block;
+  color: #1168e8;
+  font-weight: 450;
+}
+
+.vk-services-heading-wrap p {
+  max-width: 650px;
+  margin: 35px 0 0;
+
+  color: #6382a5;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   GROUP INTRO
+========================================= */
+
+.vk-service-group {
+  position: relative;
+}
+
+.vk-group-intro {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  margin-bottom: 45px;
+}
+
+.vk-group-number {
+  display: grid;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  border: 1px solid #c9def5;
+
+  color: #1268e8;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+.vk-group-label {
+  margin: 3px 0 13px;
+
+  color: #6d8eaf;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+
+.vk-group-intro h3 {
+  margin: 0;
+
+  font-size: clamp(30px, 3vw, 45px);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+  font-weight: 700;
+}
+
+.vk-group-intro h3 em {
+  color: #1268e8;
+  font-style: normal;
+  font-weight: 450;
+}
+
+
+/* =========================================
+   HOSPITALITY CARDS
+========================================= */
+
+.vk-service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.vk-service-card {
+  position: relative;
+  min-height: 340px;
+
+  padding: 30px;
+
+  background: rgba(255, 255, 255, .82);
+  border: 1px solid #d9e9fa;
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s ease,
+    border-color .45s ease;
+}
+
+.vk-service-card:hover {
+  transform: translateY(-8px);
+  border-color: #b8d7f7;
+
+  box-shadow:
+    0 25px 60px rgba(21, 76, 132, .10);
+}
+
+.vk-card-number {
+  position: absolute;
+  top: 25px;
+  right: 27px;
+
+  color: #a2bdd9;
+  font-family: monospace;
+  font-size: 11px;
+}
+
+.vk-card-icon {
+  width: 53px;
+  height: 53px;
+
+  display: grid;
+  place-items: center;
+
+  margin-top: 55px;
+  margin-bottom: 30px;
+
+  border-radius: 50%;
+  background: #eef6ff;
+  color: #1268e8;
+}
+
+.vk-card-icon svg {
+  width: 22px;
+  height: 22px;
+
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.vk-service-card h4 {
+  margin: 0;
+
+  max-width: 230px;
+
+  color: #0b315d;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: -.025em;
+}
+
+.vk-service-card p {
+  margin: 17px 0 0;
+
+  color: #708eae;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.vk-card-arrow {
+  position: absolute;
+  bottom: 27px;
+  right: 28px;
+
+  color: #1268e8;
+  font-size: 20px;
+
+  opacity: .55;
+
+  transition:
+    transform .3s ease,
+    opacity .3s ease;
+}
+
+.vk-service-card:hover .vk-card-arrow {
+  opacity: 1;
+  transform: translate(4px, -4px);
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.vk-services-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 115px 0;
+
+  background: #d8e8f8;
+}
+
+
+/* =========================================
+   EVENTS
+========================================= */
+
+.vk-events-group {
+  padding-bottom: 20px;
+}
+
+.vk-event-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 14px;
+}
+
+.vk-event-card {
+  position: relative;
+
+  min-height: 390px;
+  padding: 31px;
+
+  background: #ffffff;
+
+  border: 1px solid #d9e9fa;
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s ease;
+}
+
+.vk-event-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 60px rgba(21, 76, 132, .10);
+}
+
+.vk-event-card-large {
+  background: #092d59;
+  border-color: #092d59;
+  color: white;
+}
+
+.vk-event-card-large::before {
+  content: "";
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  right: -150px;
+  bottom: -180px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,.09);
+}
+
+.vk-event-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vk-event-index {
+  color: #7899bb;
+  font-family: monospace;
+  font-size: 11px;
+}
+
+.vk-event-card-large .vk-event-index {
+  color: rgba(255,255,255,.45);
+}
+
+.vk-event-icon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #1268e8;
+  background: #eef6ff;
+}
+
+.vk-event-card-large .vk-event-icon {
+  color: #fff;
+  background: rgba(255,255,255,.09);
+}
+
+.vk-event-icon svg {
+  width: 21px;
+  height: 21px;
+
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.vk-event-content {
+  margin-top: 75px;
+}
+
+.vk-event-tag {
+  color: #1268e8;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.vk-event-card-large .vk-event-tag {
+  color: #73aaff;
+}
+
+.vk-event-content h4 {
+  max-width: 400px;
+
+  margin: 14px 0 20px;
+
+  font-size: 30px;
+  line-height: 1.02;
+  letter-spacing: -.045em;
+}
+
+.vk-event-content h4 span {
+  color: #1268e8;
+  font-weight: 450;
+}
+
+.vk-event-card-large .vk-event-content h4 span {
+  color: #69a5ff;
+}
+
+.vk-event-content p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: #708eae;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.vk-event-card-large .vk-event-content p {
+  color: rgba(255,255,255,.62);
+}
+
+.vk-event-line {
+  position: absolute;
+
+  left: 31px;
+  right: 31px;
+  bottom: 28px;
+
+  height: 1px;
+
+  background: #e0edf9;
+}
+
+.vk-event-card-large .vk-event-line {
+  background: rgba(255,255,255,.12);
+}
+
+
+/* =========================================
+   FOOTER STATEMENT
+========================================= */
+
+.vk-services-footer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 35px;
+
+  margin-top: 80px;
+  padding-top: 35px;
+
+  border-top: 1px solid #d8e8f8;
+}
+
+.vk-footer-mark {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #1268e8;
+  color: white;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.vk-services-footer p {
+  margin: 0;
+
+  color: #6d8cab;
+  font-size: 14px;
+}
+
+.vk-services-footer strong {
+  color: #092d59;
+}
+
+.vk-services-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 13px 20px;
+
+  color: #092d59;
+
+  border: 1px solid #c9def5;
+  border-radius: 100px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: .3s ease;
+}
+
+.vk-services-cta span {
+  color: #1268e8;
+  font-size: 17px;
+}
+
+.vk-services-cta:hover {
+  background: #1268e8;
+  color: white;
+  border-color: #1268e8;
+}
+
+.vk-services-cta:hover span {
+  color: white;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .vk-services-header {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .vk-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vk-event-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .vk-event-card-large {
+    grid-column: span 2;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .vk-hospitality-services {
+    padding: 90px 0;
+  }
+
+  .vk-services-container {
+    width: min(100% - 30px, 1380px);
+  }
+
+  .vk-services-header {
+    margin-bottom: 75px;
+  }
+
+  .vk-services-heading-wrap h2 {
+    font-size: 46px;
+  }
+
+  .vk-services-heading-wrap p {
+    font-size: 15px;
+  }
+
+  .vk-group-intro {
+    gap: 17px;
+  }
+
+  .vk-group-intro h3 {
+    font-size: 31px;
+  }
+
+  .vk-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vk-service-card {
+    min-height: 300px;
+  }
+
+  .vk-services-divider {
+    margin: 80px 0;
+  }
+
+  .vk-event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vk-event-card-large {
+    grid-column: auto;
+  }
+
+  .vk-event-card {
+    min-height: 350px;
+  }
+
+  .vk-services-footer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+}
